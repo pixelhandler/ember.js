@@ -1,0 +1,35 @@
+{
+  "name": "integration",
+  "summary": "Integration Tests",
+  "description": "Ember application integration tests",
+  "homepage": "http://emberjs.com",
+  "authors": ["Peepcode", "Bill Heaton"],
+  "version": "1.0.0-rc.1"
+
+  "directories": {
+    "lib": "lib"
+  },
+
+  "dependencies": {},
+    "spade": "~> 1.0.0",
+    "ember": "1.0.0-rc.1",
+    "ember-application": "1.0.0-rc.1",
+    "ember-runtime": "1.0.0-rc.1",
+    "ember-views": "1.0.0-rc.1",
+    "ember-states": "1.0.0-rc.1",
+    "ember-routing": "1.0.0-rc.1",
+    "ember-handlebars": "1.0.0-rc.1"
+  },
+
+  "dependencies:development": {},
+    "spade-qunit": "~> 1.0.0"
+  },
+
+  "bpm:build": {
+    "bpm_libs.js": {
+      "files": ["lib"],
+      "modes": "*"
+    }
+  }
+}
+

@@ -21,6 +21,8 @@ testing_suites:
     - "package=all&extendprototypes=true&nojshint=true"
     - "package=all&extendprototypes=true&jquery=git&nojshint=true"
     - "package=all&skipPackage=container&dist=build&nojshint=true" # container isn't publicly available in the built version
+  integration:
+    - "package=integration&jquery=1.8.3"
 testing_packages:
   - container
   - ember-metal
@@ -33,5 +35,6 @@ testing_packages:
   - ember
 testing_additional_requires:
   - ember-debug
+  - integration
   - rsvp
 testing_ember: true
