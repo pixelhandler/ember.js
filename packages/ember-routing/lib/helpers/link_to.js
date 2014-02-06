@@ -357,11 +357,8 @@ Ember.onLoad('Ember.Handlebars', function(Handlebars) {
       // Schedule eager URL update, but after we've given the transition
       // a chance to synchronously redirect.
       if (Ember.FEATURES.isEnabled("ember-eager-url-update")) {
-        var href = get(this, 'href');
-        if (typeof href === 'undefined') {
-          href = router.generate.apply(router, get(this, 'routeArgs'));
-        }
-        Ember.run.scheduleOnce('routerTransitions', this, this._eagerUpdateUrl, transition, href);
+        var url = router.router.generate.apply(router.router, get(this, 'routeArgs'));
+        Ember.run.scheduleOnce('routerTransitions', this, this._eagerUpdateUrl, transition, url);
       }
     },
 
